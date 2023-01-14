@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import './styles/_main.scss'
+import Main from './components/Main';
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
     <div className={`app ${isVisible  ? 'app-visible' : ''}`}>
       <Nav />
       <Header />
+      <Main isVisible={isVisible}/>
     </div>
   )
 }
