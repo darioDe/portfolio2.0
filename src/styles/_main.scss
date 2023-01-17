@@ -1,4 +1,4 @@
-
+$color1: #bbb5a2;
 
 * {
    margin: 0;
@@ -11,7 +11,7 @@
 body {
    background-color: black;
    width: 100%;
-   color: #bbb5a2;
+   color: $color1;
  }
 
 //  APP STYLES
@@ -73,7 +73,6 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      color: #fff;
 
       li {
          list-style: none;
@@ -84,15 +83,15 @@ body {
 
          a {
             text-decoration: none;
-            color: yellow;
+            color: $color1;
          }
 
          a:hover {
-            color: yellowgreen;
+            color: $color1;
          }
 
          .light-icon {
-            color: #a5a7b7;
+            color: $color1;
          }
       }
 
@@ -188,12 +187,21 @@ main {
 
    .about-location {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
    }
 
    .p-visible {
       opacity: 1;
    }
+}
+
+// PROJECTS STYLES 
+
+.proj-container {
+   margin: 100px auto;
+   max-width: 80%;
+   padding: 25px;
+   text-align: center;
 }
 
