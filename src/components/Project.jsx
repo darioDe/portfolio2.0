@@ -7,8 +7,8 @@ const Project = ({ work }) => {
          <img className='proj-img' 
             src={work.image} alt="" 
          />
-         <div>
-           <p className='proj-modal-p'> {work.despcription} </p>
+         <div className="proj-text-content">
+           <p className='proj-p'> {work.despcription} </p>
            <button className='proj-button'><a href={work.repository} target="_blank"> REPOSITORY </a></button>
            <button className='proj-button'><a href={work.deploy} target="_blank"> DEPLOY </a></button>
          </div>

@@ -204,12 +204,61 @@ main {
    padding: 25px;
    text-align: center;
    opacity: 0;
+
+   
+
+   border-radius: 0.5rem;
+   background-color: black;
+   padding: 5%;
 }
 
 .proj-border-animated {
    opacity: 0;
    transform: translateY(400px);
    animation: fade-up 2.5s ease forwards;
+
+   .proj-box {
+      text-align: left;
+      margin: 50px auto;
+
+      .proj-title {
+         padding: 15px;
+       }
+
+      .proj-img {
+         width: 100%;
+      }
+
+      .proj-text-content {
+         margin: 15px auto;
+
+         .proj-p {
+            margin: 15px auto;
+         }
+
+         .proj-button {
+            border-radius: 1.5rem;
+            width: 40%;
+            border: none;
+            height: 40px;
+            margin: 10px;
+            transition: background-color 0.5s;
+            
+            a {
+              text-decoration: none;
+              color: var(--white1);
+            }
+         } 
+            
+          .proj-button:hover {
+            background-color: var(--yellow2);
+            border:1px solid var(--black1);
+          }
+
+      }
+   }
+
+   
  }
 
 //  PROJ ANIMATION
@@ -220,5 +269,7 @@ main {
      transform: translateY(0);
    }
  }
+
+
 
 
