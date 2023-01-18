@@ -7,22 +7,34 @@ const Projects = () => {
 
   //STATE TO CONTROL VISIBILITY
   const [isVisible, setIsVisible] = useState(false);
+  // REF FOR SECTION
+  const proj = useRef(null);
 
   // FUNCTION FOR SCROLL EVENT
   useEffect(() => {
     
     window.addEventListener('scroll', () => {
-      // HAVE THE DISTANCE OF VIEWPORT BORDER TOP TO ELEMENT BORDER TOP
-      const elementTop = proj.current.offsetTop;
 
-      // CHECK IF VIEWPORT BORDER BOTTOM IS ON HALF OF P ELEMENTS
-      if (window.innerHeight + window.scrollY >= proj.current.offsetHeight / 2)  {
-        setIsVisible(true);
+      const element = proj.current;
+      const elementTop = element.offsetTop;
+      const elementHeight = element.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      if ( window.scrollY >= elementTop + (elementHeight * 1/4) - viewportHeight ) {
+        setIsVisible(true)
       }
     });
+    // window.addEventListener('scroll', () => {
+    //   // HAVE THE DISTANCE OF VIEWPORT BORDER TOP TO ELEMENT BORDER TOP
+    //   const elementTop = proj.current.offsetTop;
+
+    //   // CHECK IF VIEWPORT BORDER BOTTOM IS ON HALF OF P ELEMENTS
+    //   if (window.innerHeight + window.scrollY >= proj.current.offsetHeight / 2)  {
+    //     setIsVisible(true);
+    //   }
+    // });
   }, []);
 
-  const proj = useRef(null);
 
   return (
     <section 
