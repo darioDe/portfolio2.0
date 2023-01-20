@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import About from './About'
 import Projects from './Projects'
+import Skills from './Skills';
 
 const Main = ( {isVisible}) => {
 
@@ -18,6 +19,7 @@ const Main = ( {isVisible}) => {
         <>
           <About  />
           <Projects />
+          {/* <Skills /> */}
         </>
       }
    </main>

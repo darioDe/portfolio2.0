@@ -9,8 +9,8 @@ const Project = ({ work }) => {
          />
          <div className="proj-text-content">
            <p className='proj-p'> {work.despcription} </p>
-           <button className='proj-button'><a href={work.repository} target="_blank"> REPOSITORY </a></button>
-           <button className='proj-button'><a href={work.deploy} target="_blank"> DEPLOY </a></button>
+           <button className='proj-button proj-button-blue'><a href={work.repository} target="_blank"> REPOSITORY </a></button>
+           <button className='proj-button proj-button-red'><a href={work.deploy} target="_blank"> DEPLOY </a></button>
          </div>
        </div>     
      </div>

@@ -42,7 +42,7 @@ const Projects = () => {
       ref={proj}
     >
 
-      <h2 className='proj-h2'> PROJECTS </h2>
+      <h3 className='proj-h3'> PROJECTS </h3>
       {works.map( work => 
          <Project 
             work={work}

@@ -1,4 +1,5 @@
 $color1: #bbb5a2;
+$size-title: 2rem;
 
 * {
    margin: 0;
@@ -175,11 +176,11 @@ main {
 
    h3 {
       margin-bottom: 25px;
-      font-size: 1.5rem;
+      font-size: $size-title;
    }
 
    .about-p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 2rem auto;
       max-width: 500px;
       opacity: 0;
@@ -200,12 +201,17 @@ main {
 
 .proj-container {
    margin: 100px auto;
-   max-width: 80%;
+   max-width: 100%;
    text-align: center;
    opacity: 0;
    border-radius: 0.5rem;
-   background-color: #141414;
+   // background-color: #141414;
+   background: linear-gradient(to bottom, #000000, #121212, #141414);
    padding: 60px 5%;
+
+   .proj-h3 {
+      font-size: $size-title;
+   }
 }
 
 .proj-border-animated {
@@ -216,13 +222,17 @@ main {
    .proj-box {
       text-align: left;
       margin: 50px auto;
+      max-width: 400px;
 
       .proj-title {
          padding: 15px;
+         font-size: 1.5rem;
        }
 
       .proj-img {
          width: 100%;
+         border: 0.5rem solid #000000;
+         border-radius: 0.5rem;
       }
 
       .proj-text-content {
@@ -230,6 +240,7 @@ main {
 
          .proj-p {
             margin: 15px auto;
+            font-size: 1.1rem;
          }
 
          .proj-button {
@@ -239,17 +250,30 @@ main {
             height: 40px;
             margin: 10px;
             transition: background-color 0.5s;
+            font-size: 1rem;
+            font-weight: bold;
             
             a {
               text-decoration: none;
               color: var(--white1);
             }
          } 
+
+         .proj-button-red {
+            background-color: #8f4444;
+         }
+
+         .proj-button-blue {
+            background-color: #607d8b;;
+         }
+
+         .proj-button-red:hover {
+
+         }
+
+         .proj-button-blue:hover {
             
-          .proj-button:hover {
-            background-color: var(--yellow2);
-            border:1px solid var(--black1);
-          }
+         }
 
       }
    }
