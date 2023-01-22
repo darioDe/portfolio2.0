@@ -1,152 +1,53 @@
-import { useState } from 'react';
-import { Icon } from 'react-icon-kit';
-// import { progressBar } from 'react-icons-kit/fa/progressBarr';
-import { useInView } from 'react-intersection-observer'
+import React from 'react';
+import { FaBootstrap, FaCss3Alt, FaGit, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, FaSass } from 'react-icons/fa';
+import Skill from './Skill';
+
+
 
 const Skills = () => {
-
-  // STATE FOR PROGRESS BAR
-  const [progress, setProgress] = useState(0);
-  
-  // REF FOR CONTAINER
-  const [ref, inView] = useInView({ threshold: 0});
-  
-  // USEEFFECT FOR FULL PROGRESS
-  useEffect(() => {
-
-    let intervalid = null;
-
-    if (inView) {
-
-      intervalid = setInterval(() => {
-        
-        if (progress >= 100) {
-          clearInterval(intervalid);
-        
-        } else {
-          
-          setProgress(progress + 1);
-
-        }
-      }, 50);
-
-    }
-
-    return () => clearInterval(intervalid);
-  }, [inView, progress]);
-
-  const handleScroll = () => {
-    const totalHeight = document.body.scrollHeight - window
-  }
-
   return (
-    <div 
-      className='skills-container'
-      ref={ref}
-    >
-      <h3> My Skills </h3>
+    <section className='skill-container'>
+      <h3 className='skill-h3'> TOOLS & SKILLS </h3>
 
-      <div className='skills-icon-container'>
-        
-        <div className='icon-progress-container'>
-          <Icon
-            icon={html5}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <p className='skill-p'> These are some of the skills and tools that I have learned to use. I also have experience with Tailwind and other libraries. Over time, I will continue to add many more!</p>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={css3}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'HTML5'}>
+        <FaHtml5 className='tool' />
+      </ Skill>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={javascript}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'CSS3'}>
+        <FaCss3Alt className='tool' />
+      </ Skill>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={react}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'JavaScript'}>
+        <FaJs className='tool' />
+      </ Skill>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={next}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'React Js'}>
+        <FaReact className='tool' />
+      </ Skill>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={sass}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'Bootstrap'}>
+        <FaBootstrap className='tool' />
+      </ Skill>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={bootstrap}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'Sass'}>
+        <FaSass className='tool' />
+      </ Skill>
 
-        <div className='icon-progress-container'>
-          <Icon
-            icon={tailwind}
-            size={32}
-          />
-          <div 
-            className='progress-bar'
-            style={{width: `${progress}%`}}
-          >
-          </div>
-        </div>
+      <Skill name={'Git'}>
+        <FaGit className='tool' />
+      </ Skill>
 
-      </div>
+      <Skill name={'Github'}>
+        <FaGithub className='tool' />
+      </ Skill>
+
+      <Skill name={'Node Js'}>
+        <FaNodeJs className='tool' />
+      </ Skill> 
       
-    </div>
+    </section>
   )
 }
 

@@ -3,6 +3,7 @@ import About from './About'
 import Projects from './Projects'
 import Skills from './Skills';
 
+
 const Main = ( {isVisible}) => {
 
   const [visbleComponets, setVisbleComponets] = useState(false);
@@ -18,8 +19,10 @@ const Main = ( {isVisible}) => {
       {visbleComponets &&
         <>
           <About  />
-          <Projects />
-          {/* <Skills /> */}
+          <div className='midle-main'>
+            <Projects />
+            <Skills />
+          </div>
         </>
       }
    </main>

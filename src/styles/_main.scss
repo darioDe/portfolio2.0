@@ -197,16 +197,22 @@ main {
    }
 }
 
+// MIDLE MAIN 
+
+.midle-main {
+   background: linear-gradient(to bottom, #000000, #121212, #141414, #121212 , #000000);
+}
+
 // PROJECTS STYLES 
 
 .proj-container {
-   margin: 100px auto;
+   margin: 100px auto 0px auto;
    max-width: 100%;
    text-align: center;
    opacity: 0;
-   border-radius: 0.5rem;
+   // border-radius: 0.5rem;
    // background-color: #141414;
-   background: linear-gradient(to bottom, #000000, #121212, #141414);
+   // background: linear-gradient(to bottom, #000000, #121212, #141414);
    padding: 60px 5%;
 
    .proj-h3 {
@@ -274,12 +280,9 @@ main {
          .proj-button-blue:hover {
             
          }
-
       }
    }
-
-   
- }
+}
 
 //  PROJ ANIMATION
 
@@ -289,6 +292,80 @@ main {
      transform: translateY(0);
    }
  }
+
+// SKILLS STYLES
+
+.skill-container {
+   text-align: center;
+   margin: 100px auto;
+
+   .skill-h3 {
+      font-size: $size-title;
+      margin-bottom: 30px;
+
+   }
+
+   .skill-p {
+      padding: 0 30px;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+   }
+   
+   .skill {
+
+      display: flex;
+      width: 80%;
+      margin: auto;
+      justify-content: space-around;
+      height: 100px;
+      align-items: center;
+
+      .tool {
+         height: 50px;
+         width: 50px;
+      }
+
+      .tool-box {
+         display: flex;
+         flex-direction: column;
+         width: 35%;
+         
+         .tool-p {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+         }
+
+         .progress-bar {
+            grid-area: bar;
+            height: 25px;
+            width: 100%;
+            background-color: #282828;
+            border-radius: 3px;
+      
+            .percent {
+                height: 25px;                                
+                position: relative;
+                animation: fillBars 5s;                                
+                transition-duration: 5s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+      
+            .percent-p {
+                position: relative;
+                z-index: 5;
+                top: -21px;
+                color: black;
+                font-weight: bold;
+            }          
+        }
+      }
+      
+
+   }
+}
+
 
 
 
