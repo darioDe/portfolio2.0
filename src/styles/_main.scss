@@ -320,15 +320,24 @@ main {
       height: 100px;
       align-items: center;
 
-      .tool {
-         height: 50px;
-         width: 50px;
+      .container-children {
+         opacity: 0;
+         // transform: translateX(-40px);
+         transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+
+         .tool {
+            height: 50px;
+            width: 50px;
+         }
       }
+
 
       .tool-box {
          display: flex;
          flex-direction: column;
          width: 35%;
+         opacity: 0;
+         // transform: translateX(-40px);
          
          .tool-p {
             margin-bottom: 0.5rem;
@@ -366,6 +375,44 @@ main {
    }
 }
 
+.visible-child {
+   opacity: 0;
+   transform: translateX(0);
+   animation: fadeInRight 0.5s ease-in;
+   animation-fill-mode: both;
+}
+ 
+@keyframes fadeInRight {
+   from {
+     opacity: 0;
+     transform: translateX(-40px);
+   }
+   to {
+     opacity: 1;
+     transform: translateX(0);
+   }
+}
+
+.visible-box {
+   opacity: 0;
+   transform: translateX(0);
+   animation: fadeInLeft 0.5s ease-in;
+   animation-fill-mode: both;
+ }
+ 
+ @keyframes fadeInLeft {
+   from {
+     opacity: 0;
+     transform: translateX(40px);
+   }
+   to {
+     opacity: 1;
+     transform: translateX(0);
+   }
+ }
+
+
+ 
 
 
 

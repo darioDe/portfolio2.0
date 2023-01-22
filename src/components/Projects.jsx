@@ -24,17 +24,7 @@ const Projects = () => {
         setIsVisible(true)
       }
     });
-    // window.addEventListener('scroll', () => {
-    //   // HAVE THE DISTANCE OF VIEWPORT BORDER TOP TO ELEMENT BORDER TOP
-    //   const elementTop = proj.current.offsetTop;
-
-    //   // CHECK IF VIEWPORT BORDER BOTTOM IS ON HALF OF P ELEMENTS
-    //   if (window.innerHeight + window.scrollY >= proj.current.offsetHeight / 2)  {
-    //     setIsVisible(true);
-    //   }
-    // });
   }, []);
-
 
   return (
     <section 
