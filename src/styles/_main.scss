@@ -328,6 +328,11 @@ main {
          .tool {
             height: 50px;
             width: 50px;
+            cursor: pointer;
+         }
+
+         .tool:hover {
+            color: yellow;
          }
       }
 
@@ -354,20 +359,12 @@ main {
             .percent {
                 height: 25px;                                
                 position: relative;
-                animation: fillBars 5s;                                
-                transition-duration: 5s;
+                animation: fillBars 1s;                                
+                transition-duration: 1s;
                 animation-timing-function: linear;
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
-            }
-      
-            .percent-p {
-                position: relative;
-                z-index: 5;
-                top: -21px;
-                color: black;
-                font-weight: bold;
-            }          
+            }         
         }
       }
       
@@ -375,6 +372,7 @@ main {
    }
 }
 
+// ANIMATION FOR SKILL ICONS 
 .visible-child {
    opacity: 0;
    transform: translateX(0);
@@ -393,14 +391,15 @@ main {
    }
 }
 
-.visible-box {
+// ANIMATION FOR PROGRESS BAR
+.visible-bar {
    opacity: 0;
    transform: translateX(0);
    animation: fadeInLeft 0.5s ease-in;
    animation-fill-mode: both;
  }
  
- @keyframes fadeInLeft {
+@keyframes fadeInLeft {
    from {
      opacity: 0;
      transform: translateX(40px);
@@ -409,7 +408,14 @@ main {
      opacity: 1;
      transform: translateX(0);
    }
- }
+}
+
+@keyframes fillBars {
+   0% { width: 0%; background-color: yellow;};
+   25% { width: 25%; background-color: yellow;};
+   50%{ width: 50%; background-color: yellow;};
+   100% { width: 100%; background-color: yellow; }    
+}
 
 
  
