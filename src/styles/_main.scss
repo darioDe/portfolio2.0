@@ -417,6 +417,25 @@ main {
    100% { width: 100%; background-color: yellow; }    
 }
 
+// CONTACT STYLES 
+
+.contact-container {
+   text-align: center;
+
+   .contact-h3 {
+      font-size: $size-title;
+      margin-bottom: 30px;
+   }
+
+   form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      padding: 0 2rem;
+
+      input {}
+   }
+}
 
  
 
