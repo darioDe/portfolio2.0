@@ -2,9 +2,24 @@ import React from 'react'
 import { useForm } from '../hooks/useForm'
 ;
 
-const initialForm = {};
+const initialForm = {
+  name : '',
+  email : '',
+  subject : '',
+  comments : '',
+};
 
-const validationsForm = (form) => {};
+const validationsForm = (form) => {
+  let errors = {
+  };
+
+  if (!form.name.trim()) {
+    errors.name = 'Name is required';
+    
+  }
+
+  return errors;
+};
 
 const Contact = () => {
   // FORM CONTROLLER HOOK
@@ -31,6 +46,8 @@ const Contact = () => {
           value={form.name} 
           required 
         />
+        {errors.name && <p>{errors.name}</p>}
+
         <input 
           type="email" 
           name='email' 
@@ -40,6 +57,8 @@ const Contact = () => {
           value={form.email} 
           required 
         />
+        {errors.email && <p>{errors.email}</p>}
+
         <input 
           type="text" 
           name='subject' 
@@ -49,6 +68,8 @@ const Contact = () => {
           value={form.subject} 
           required 
         />
+        {errors.subject && <p>{errors.subject}</p>}
+
         <textarea 
           name="comments" 
           cols="50" 
@@ -59,6 +80,8 @@ const Contact = () => {
           value={form.comments} 
           required  
         > </textarea>
+        {errors.comments && <p>{errors.comments}</p>}
+
         <input type="submit" value="Send" />
 
       </form>
