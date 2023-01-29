@@ -1,4 +1,6 @@
 import React from 'react'
+import Loader from './Loader';
+import Message from './Message';
 import { useForm } from '../hooks/useForm'
 ;
 
@@ -65,18 +67,18 @@ const Contact = () => {
           value={form.name} 
           required 
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className='error'>{errors.name}</p>}
 
         <input 
           type="email" 
           name='email' 
-          placeholder='E-mail' 
+          placeholder='E-mail Adress' 
           onBlur={handleBlur} 
           onChange={handleChange} 
           value={form.email} 
           required 
         />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className='error'>{errors.email}</p>}
 
         <input 
           type="text" 
@@ -87,7 +89,7 @@ const Contact = () => {
           value={form.subject} 
           required 
         />
-        {errors.subject && <p>{errors.subject}</p>}
+        {errors.subject && <p className='error'>{errors.subject}</p>}
 
         <textarea 
           name="comments" 
@@ -99,11 +101,15 @@ const Contact = () => {
           value={form.comments} 
           required  
         > </textarea>
-        {errors.comments && <p>{errors.comments}</p>}
+        {errors.comments && <p className='error'>{errors.comments}</p>}
 
-        <input type="submit" value="Send" />
+        <input type="submit" value="SUBMIT" />
 
       </form>
+
+      {loading && <Loader /> }
+      {response && <Message msg='The data has been send correctly' /> }
+       
       
    </section>
   )

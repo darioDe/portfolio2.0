@@ -432,10 +432,11 @@ main {
       flex-direction: column;
       max-width: 600px;
       padding: 0 2rem;
+      margin: auto;
 
-      input[type='text'],
-      input[type='email'],
-      textarea {
+      input[type='text']:invalid,
+      input[type='email']:invalid,
+      textarea:invalid {
          border: thin solid #dedede;
          border-radius: 0.25rem;
          padding: 0.75rem;
@@ -445,15 +446,70 @@ main {
          width: 100%;
          font-size: 1rem;
          line-height: 1;
-         background-color: transparent;
+         background-color: #141414;
+      }
+
+      input[type='text']:valid,
+      input[type='email']:valid,
+      textarea:valid {
+         border: thin solid rgb(190, 136, 66);
+         border-radius: 0.25rem;
+         padding: 0.75rem;
+         margin-bottom: 1rem;
+         outline: none;
+         display: block;
+         width: 100%;
+         font-size: 1rem;
+         line-height: 1;
+         background-color: #141414;
+         color: #a5a397;
+         font-weight: bold;
+            
+      }
+
+      input[type='text']:focus,
+      input[type='email']:focus,
+      textarea:focus {
+         border: thin solid burlywood;
+         border-radius: 0.25rem;
+         padding: 0.75rem;
+         margin-bottom: 1rem;
+         outline: none;
+         display: block;
+         width: 100%;
+         font-size: 1rem;
+         line-height: 1;
+         background-color: #141414;
+         color: #a5a397;
+         font-weight: bold;
+      }
+
+
+      input[type='submit'] {
+         font-size: 1rem;
+         width: 50%;
+         height: 2rem;
+         margin: 1rem auto;
+         background-color: burlywood;
+         border-radius: 0.25rem;
+         color: black;
+         
       }
 
       textarea {
          font-family: inherit;
          resize: none;
       }
+
+      .error {
+         background-color: #8f4444;
+         height: 1.2rem;
+         margin-bottom: 1rem;
+      }
+
    }
 }
+
 
 // LOADER COMPONENT
 
@@ -497,10 +553,11 @@ main {
 
 .msg {
    padding: 1rem;
-   margin-bottom: 1rem;
+   margin: 1rem;
    text-align: center;
    font-weight: bold;
-   background-color: red;
+   background-color: #607d8b;
+   max-width: 550px;
 }
 
 

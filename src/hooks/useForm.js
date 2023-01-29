@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { helpHttp } from '../components/helpers/helpHttp'
+
+
 
 
 export const useForm = (initialForm, validateForm) => {
@@ -16,6 +19,7 @@ export const useForm = (initialForm, validateForm) => {
     });
   };
   
+  
   const handleBlur = (e) => {
     handleChange(e);
     setErrors(validateForm(form));
@@ -27,8 +31,25 @@ export const useForm = (initialForm, validateForm) => {
     
     if (Object.keys(errors).length === 0) {
       alert('enviando formulario');
-      // setLoading(true);
-      
+      setLoading(true);
+      helpHttp()
+        .post('https://formsubmit.co/ajax/rdduarte1811@gmail.com',
+          {body: form,
+          headers: {
+            'Content-Type':"application/json",
+            Accept: 'application/json'
+          },
+        })
+        .then((res) => {
+          setLoading(false);
+          setResponse(true);
+          setForm(initialForm);
+          setTimeout(() => setResponse(false), 5000);
+        }
+      );
+        
+    } else {
+      return;
     }
   };
 
