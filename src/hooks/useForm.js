@@ -37,7 +37,7 @@ export const useForm = (initialForm, validateForm) => {
           {body: form,
           headers: {
             'Content-Type':"application/json",
-            Accept: 'application/json'
+            "Accept": 'application/json'
           },
         })
         .then((res) => {

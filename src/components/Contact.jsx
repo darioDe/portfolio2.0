@@ -3,6 +3,7 @@ import Loader from './Loader';
 import Message from './Message';
 import { useForm } from '../hooks/useForm'
 ;
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const initialForm = {
   name : '',
@@ -57,6 +58,14 @@ const Contact = () => {
   return (
    <section className='contact-container'>
       <h3 className='contact-h3'> CONTACT ME </h3>
+
+      <p className='contact-p'> If you want to contact whit me, you can do it in :</p>
+      <ul className=''>
+        <li className='contact-li'> <FaGithub className='contact-icon' /> <a href='https://github.com/darioDe'> My Github Profile </a> </li>
+        <li className='contact-li'> <FaEnvelope className='contact-icon' /> <p href=''> rdduarte1811@gmail.com </p> </li>
+        <li className='contact-li'> <FaLinkedin className='contact-icon' /> <a href='https://www.linkedin.com/in/rubenduarte1811/'> My Linkedin Profile </a> </li>
+      </ul>
+
       <form onSubmit={handleSubmit}>
         <input 
           type="text" 
