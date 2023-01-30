@@ -32,18 +32,25 @@ const About = ({ isVisble }) => {
       className='about-container'
    >
       <h3> ABOUT ME </h3>
+
+      <img 
+        src='images/profilepic.jpg'
+        className='about-profile' 
+      />
+
+
       <p
         className={`about-p ${visible ? 'p-visible' : ''}`}
         style={{ transition: 'opacity 1s' }}
       >
-        Hi, I'm a front-end developer with a passion for creating beautiful and user-friendly websites and applications. I'm always looking for opportunities to learn new skills and technologies. I like to read blogs and tutorials to stay up-to-date with the latest trends in front-end development.
+        Hi, I'm a <span> front-end developer </span> with a passion for creating beautiful and user-friendly websites and applications. I'm always looking for opportunities to <span> learn new skills and technologies </span>. I like to read blogs and tutorials to stay up-to-date with the latest trends in front-end development.
       </p>
 
       <p
         className={`about-p ${visible ? 'p-visible' : ''}`}
         style={{ transition: 'opacity 2s' }}
       >
-        My personal skills stand out for responsibility, ability to work in a team because I am a communicative and positive person. I know how to learn from my mistakes and listen to the advice of others. I also study and practice English and Portuguese constantly although my native language is Spanish.
+        My personal skills stand out for <span>responsibility</span>, ability to <span>work in a team</span> because I am a communicative and positive person. I know how to learn from my mistakes and listen to the advice of others. I also study and practice <span>English</span> and <span>Portuguese</span> constantly although my native language is <span>Spanish</span>.
       </p>
       <div className='about-location'>
         <FaMapMarked className='about-map' />

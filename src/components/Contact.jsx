@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useEffect, useRef } from 'react';
 import Loader from './Loader';
 import Message from './Message';
 import { useForm } from '../hooks/useForm'
@@ -44,6 +44,27 @@ const validationsForm = (form) => {
 };
 
 const Contact = () => {
+
+  //STATE TO CONTROL VISIBILITY
+  const [visible, setVisible] = useState(false);
+
+  // REF FOR SECTION
+  const element = useRef(null);
+
+   // FUNCTION FOR SCROLL EVENT
+  useEffect(() => {
+    
+   window.addEventListener('scroll', () => {
+     // HAVE THE DISTANCE OF VIEWPORT BORDER TOP TO ELEMENT BORDER TOP
+     const elementTop = element.current.offsetTop;
+
+     // CHECK IF VIEWPORT BORDER BOTTOM IS ON HALF OF P ELEMENTS
+     if (window.innerHeight + window.scrollY >= elementTop + element.current.offsetHeight / 2) {
+       setVisible(true);
+     }
+   });
+ }, []);
+
   // FORM CONTROLLER HOOK
   const  {
     form,
@@ -56,17 +77,29 @@ const Contact = () => {
   } = useForm(initialForm, validationsForm);
 
   return (
-   <section className='contact-container'>
+    <section 
+      ref={element} 
+      className='contact-container'
+    >
       <h3 className='contact-h3'> CONTACT ME </h3>
 
       <p className='contact-p'> If you want to contact whit me, you can do it in :</p>
-      <ul className=''>
+      <ul 
+        className={`${visible ? 'visible' : ""}`}
+        style={{ transition: 'opacity 1s' }}
+      >
         <li className='contact-li'> <FaGithub className='contact-icon' /> <a href='https://github.com/darioDe'> My Github Profile </a> </li>
         <li className='contact-li'> <FaEnvelope className='contact-icon' /> <p href=''> rdduarte1811@gmail.com </p> </li>
         <li className='contact-li'> <FaLinkedin className='contact-icon' /> <a href='https://www.linkedin.com/in/rubenduarte1811/'> My Linkedin Profile </a> </li>
       </ul>
 
-      <form onSubmit={handleSubmit}>
+      <form 
+        action="https://formsubmit.co/rdduarte1811@gmail.com"
+        method='POST' 
+        onSubmit={handleSubmit}
+        className={`${visible ? 'visible' : ""}`}
+        style={{ transition: 'opacity 2s' }}
+      >
         <input 
           type="text" 
           name='name' 
@@ -120,7 +153,7 @@ const Contact = () => {
       {response && <Message msg='The data has been send correctly' /> }
        
       
-   </section>
+    </section>
   )
 }
 

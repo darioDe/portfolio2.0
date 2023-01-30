@@ -23,21 +23,21 @@ export const useForm = (initialForm, validateForm) => {
   const handleBlur = (e) => {
     handleChange(e);
     setErrors(validateForm(form));
-    
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(validateForm(form));
     
     if (Object.keys(errors).length === 0) {
-      alert('enviando formulario');
+      alert('Send form...');
       setLoading(true);
       helpHttp()
-        .post('https://formsubmit.co/ajax/rdduarte1811@gmail.com',
-          {body: form,
+        .post('https://formsubmit.co/ajax/rdduarte1811@gmail.com', {
+          body: form,
           headers: {
             'Content-Type':"application/json",
-            "Accept": 'application/json'
+            Accept: 'application/json'
           },
         })
         .then((res) => {
@@ -61,5 +61,5 @@ export const useForm = (initialForm, validateForm) => {
    handleChange,
    handleBlur,
    handleSubmit,
-  }
-}
+  };
+};
