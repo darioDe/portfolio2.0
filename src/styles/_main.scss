@@ -1,7 +1,8 @@
 $color0: #000000;
 $color1: #bbb5a2;
 $color2: #6c6243;
-$color3: #6c6243;
+$color3: #7e724e;
+$color4: #282828;
 $bg-color: #434343;
 $size-title: 2rem;
 
@@ -10,6 +11,7 @@ $size-title: 2rem;
    padding: 0;
    box-sizing: border-box;
    font-family: 'Ubuntu Mono', monospace;
+   overflow-x: hidden;
 }
 
 // BODY STYLES
@@ -201,7 +203,7 @@ main {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      width: 20rem;
+      width: 16rem;
       margin: auto;
       color: $color0;
       font-weight: 600; 
@@ -221,7 +223,7 @@ main {
 // MIDLE MAIN 
 
 .midle-main {
-   background: linear-gradient(to bottom, #000000, #121212, #141414, #121212 , #000000);
+   background-color: $bg-color;
 }
 
 // PROJECTS STYLES 
@@ -231,13 +233,11 @@ main {
    max-width: 100%;
    text-align: center;
    opacity: 0;
-   // border-radius: 0.5rem;
-   // background-color: #141414;
-   // background: linear-gradient(to bottom, #000000, #121212, #141414);
    padding: 60px 5%;
 
    .proj-h3 {
       font-size: $size-title;
+      color: $color3;
    }
 }
 
@@ -254,11 +254,12 @@ main {
       .proj-title {
          padding: 15px;
          font-size: 1.5rem;
+         color: $color0;
        }
 
       .proj-img {
          width: 100%;
-         border: 0.5rem solid #000000;
+         border: 0.5rem solid $color3;
          border-radius: 0.5rem;
       }
 
@@ -271,7 +272,7 @@ main {
          }
 
          .proj-button {
-            border-radius: 1.5rem;
+            border-radius: 0.25rem;
             width: 40%;
             border: none;
             height: 40px;
@@ -282,7 +283,7 @@ main {
             
             a {
               text-decoration: none;
-              color: var(--white1);
+              color: $color1;
             }
          } 
 
@@ -291,15 +292,15 @@ main {
          }
 
          .proj-button-blue {
-            background-color: #607d8b;;
+            background-color: #607d8b;
          }
 
          .proj-button-red:hover {
-
+            background-color: #8d3131;
          }
 
          .proj-button-blue:hover {
-            
+            background-color: #397997;
          }
       }
    }
@@ -322,6 +323,7 @@ main {
 
    .skill-h3 {
       font-size: $size-title;
+      color: $color2;
       margin-bottom: 30px;
 
    }
@@ -330,6 +332,11 @@ main {
       padding: 0 30px;
       font-size: 1.1rem;
       margin-bottom: 50px;
+
+      span {
+         color: $color0;
+         font-weight: bold;
+      }
    }
    
    .skill {
@@ -343,7 +350,6 @@ main {
 
       .container-children {
          opacity: 0;
-         // transform: translateX(-40px);
          transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 
          .tool {
@@ -353,17 +359,17 @@ main {
          }
 
          .tool:hover {
-            color: yellow;
+            color: $color2;
+            width: 60px;
+            height: 60px;
          }
       }
-
 
       .tool-box {
          display: flex;
          flex-direction: column;
          width: 35%;
          opacity: 0;
-         // transform: translateX(-40px);
          
          .tool-p {
             margin-bottom: 0.5rem;
@@ -374,7 +380,7 @@ main {
             grid-area: bar;
             height: 25px;
             width: 100%;
-            background-color: #282828;
+            background-color: $color4;
             border-radius: 3px;
       
             .percent {
@@ -432,10 +438,10 @@ main {
 }
 
 @keyframes fillBars {
-   0% { width: 0%; background-color: yellow;};
-   25% { width: 25%; background-color: yellow;};
-   50%{ width: 50%; background-color: yellow;};
-   100% { width: 100%; background-color: yellow; }    
+   0% { width: 0%; background-color: $color2;};
+   25% { width: 25%; background-color: $color2;};
+   50%{ width: 50%; background-color: $color2;};
+   100% { width: 100%; background-color: $color2; }    
 }
 
 // CONTACT STYLES 
@@ -446,13 +452,15 @@ main {
 
    .contact-h3 {
       font-size: $size-title;
-      margin: 100px auto 50px auto;
+      color: $color2;
+      margin: 100px auto 30px auto;
    }
 
    .contact-p {
       text-align: center;
       font-size: 1.2rem;
-      margin: 2rem auto;
+      margin: auto auto 50px;
+      padding: 0 30px;
       max-width: 500px;
 
    }
@@ -477,15 +485,15 @@ main {
 
          a {
             text-decoration: none;
-            color: burlywood;
+            color: $color0;
          }
 
          a:hover {
-            color: rgb(190, 136, 66);
+            color: $color3;
          }
 
          p {
-            color: burlywood
+            color: $color0;
          }
       }
    }
@@ -500,7 +508,7 @@ main {
       input[type='text']:invalid,
       input[type='email']:invalid,
       textarea:invalid {
-         border: thin solid #dedede;
+         border: thin solid $color0;
          border-radius: 0.25rem;
          padding: 0.75rem;
          margin-bottom: 1rem;
@@ -509,13 +517,13 @@ main {
          width: 100%;
          font-size: 1rem;
          line-height: 1;
-         background-color: #141414;
+         background-color: $color4;
       }
 
       input[type='text']:valid,
       input[type='email']:valid,
       textarea:valid {
-         border: thin solid rgb(190, 136, 66);
+         border: thin solid $color2;
          border-radius: 0.25rem;
          padding: 0.75rem;
          margin-bottom: 1rem;
@@ -524,7 +532,7 @@ main {
          width: 100%;
          font-size: 1rem;
          line-height: 1;
-         background-color: #141414;
+         background-color: $color4;
          color: #a5a397;
          font-weight: bold;
             
@@ -533,7 +541,7 @@ main {
       input[type='text']:focus,
       input[type='email']:focus,
       textarea:focus {
-         border: thin solid burlywood;
+         border: thin solid $color2;
          border-radius: 0.25rem;
          padding: 0.75rem;
          margin-bottom: 1rem;
@@ -542,7 +550,7 @@ main {
          width: 100%;
          font-size: 1rem;
          line-height: 1;
-         background-color: #141414;
+         background-color: $color4;
          color: #a5a397;
          font-weight: bold;
       }
@@ -553,10 +561,15 @@ main {
          width: 50%;
          height: 2rem;
          margin: 1rem auto;
-         background-color: burlywood;
+         background-color: $color2;
          border-radius: 0.25rem;
-         color: black;
-         
+         color: $color1;
+         font-weight: bold;
+         border: none;
+      }
+
+      input[type='submit']:hover {
+         background-color: $color3;
       }
 
       textarea {
@@ -565,7 +578,7 @@ main {
       }
 
       .error {
-         background-color: #8f4444;
+         background-color: #8d3131;
          height: 1.2rem;
          margin-bottom: 1rem;
       }
@@ -593,10 +606,10 @@ main {
    width: 64px;
    height: 64px;
    margin: 8px;
-   border: 8px solid #fff;
+   border: 8px solid $color1;
    border-radius: 50%;
    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-   border-color: #fff transparent transparent transparent;
+   border-color: $color1 transparent transparent transparent;
  }
  .lds-ring div:nth-child(1) {
    animation-delay: -0.45s;
@@ -620,11 +633,32 @@ main {
 
 .msg {
    padding: 1rem;
-   margin: 1rem;
+   margin: 1rem 2rem;
    text-align: center;
    font-weight: bold;
    background-color: #607d8b;
    max-width: 550px;
+}
+
+footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: $color4;
+   height: 2rem;
+
+   p {
+      margin-left: 1rem;
+   }
+
+   .footer-icon {
+      height: 2rem;
+      margin: 1rem 0 0;
+      a{
+         color: $color1;
+         margin: 1rem;
+      }
+   }
 }
 
 

@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Header from './components/Header';
 import './styles/_main.scss'
 import Main from './components/Main';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
       <Nav />
       <Header />
       <Main isVisible={isVisible}/>
+      <Footer />
     </div>
   )
 }

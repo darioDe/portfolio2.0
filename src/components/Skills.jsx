@@ -9,7 +9,7 @@ const Skills = () => {
     <section className='skill-container'>
       <h3 className='skill-h3'> TOOLS & SKILLS </h3>
 
-      <p className='skill-p'> These are some of the skills and tools that I have learned to use. I also have experience with Tailwind and other libraries. Over time, I will continue to add many more!</p>
+      <p className='skill-p'> These are some of the skills and tools that I have learned to use. I also have experience with <span>Tailwind and other libraries</span>. Over time, I will continue to add many more!</p>
 
       <Skill name={'HTML5'}>
         <FaHtml5 className='tool' />
