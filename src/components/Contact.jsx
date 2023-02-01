@@ -83,7 +83,7 @@ const Contact = () => {
     >
       <h3 className='contact-h3'> CONTACT ME </h3>
 
-      <p className='contact-p'> If you want to contact whit me, you can do it in :</p>
+      <p className='contact-p'> If you want to contact me, you can do it on :</p>
       <ul 
         className={`${visible ? 'visible' : ""}`}
         style={{ transition: 'opacity 1s' }}

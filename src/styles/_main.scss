@@ -174,7 +174,7 @@ main {
    text-align: center;
    padding: 25px;
    max-width: 80%;
-   margin: auto;
+   margin: 50px auto auto;
 
    h3 {
       margin-bottom: 25px;
@@ -229,7 +229,7 @@ main {
 // PROJECTS STYLES 
 
 .proj-container {
-   margin: 100px auto 0px auto;
+   margin: 50px auto 0px auto;
    max-width: 100%;
    text-align: center;
    opacity: 0;
@@ -250,6 +250,9 @@ main {
       text-align: left;
       margin: 50px auto;
       max-width: 400px;
+      background-color: $color4;
+      padding: 5%;
+      border-radius: 0.25rem;
 
       .proj-title {
          padding: 15px;
@@ -259,8 +262,7 @@ main {
 
       .proj-img {
          width: 100%;
-         border: 0.5rem solid $color3;
-         border-radius: 0.5rem;
+         border-radius: 0.25rem;
       }
 
       .proj-text-content {
@@ -319,7 +321,8 @@ main {
 
 .skill-container {
    text-align: center;
-   margin: 100px auto;
+   margin: 50px auto;
+   padding: 5%;
 
    .skill-h3 {
       font-size: $size-title;
@@ -338,20 +341,29 @@ main {
          font-weight: bold;
       }
    }
-   
+
+   .skill-box {
+      background-color: $color4;
+      border-radius: 0.25rem;
+
    .skill {
 
       display: flex;
-      width: 80%;
-      margin: auto;
+      width: 90%;
+      margin: 25px auto;
       justify-content: space-around;
       height: 100px;
       align-items: center;
+
+      
 
       .container-children {
          opacity: 0;
          transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 
+         
+
+         
          .tool {
             height: 50px;
             width: 50px;
@@ -363,6 +375,7 @@ main {
             width: 60px;
             height: 60px;
          }
+      
       }
 
       .tool-box {
@@ -380,7 +393,7 @@ main {
             grid-area: bar;
             height: 25px;
             width: 100%;
-            background-color: $color4;
+            background-color: $bg-color;
             border-radius: 3px;
       
             .percent {
@@ -395,7 +408,8 @@ main {
         }
       }
       
-
+      
+   }
    }
 }
 
@@ -448,7 +462,7 @@ main {
 
 .contact-container {
    text-align: center;
-   margin: 100px auto;
+   margin: 50px auto;
 
    .contact-h3 {
       font-size: $size-title;
@@ -595,7 +609,6 @@ main {
 
 .lds-ring {
    display: inline-block;
-   position: relative;
    width: 80px;
    height: 80px;
  }
