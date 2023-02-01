@@ -1,7 +1,7 @@
 $color0: #000000;
 $color1: #bbb5a2;
-$color2: #6c6243;
-$color3: #7e724e;
+$color2: #7e724e;
+$color3: #97917c;
 $color4: #282828;
 $bg-color: #434343;
 $size-title: 2rem;
@@ -180,6 +180,10 @@ main {
       margin-bottom: 25px;
       font-size: $size-title;
       color: $color3;
+
+      .icon-h3 {
+         color: $color2;
+      }
    }
 
    .about-profile {
@@ -238,6 +242,10 @@ main {
    .proj-h3 {
       font-size: $size-title;
       color: $color3;
+
+      .icon-h3 {
+         color: $color2;
+      }
    }
 }
 
@@ -257,7 +265,7 @@ main {
       .proj-title {
          padding: 15px;
          font-size: 1.5rem;
-         color: $color0;
+         color: $color3;
        }
 
       .proj-img {
@@ -326,9 +334,12 @@ main {
 
    .skill-h3 {
       font-size: $size-title;
-      color: $color2;
+      color: $color3;
       margin-bottom: 30px;
 
+      .icon-h3 {
+         color: $color2;
+      }
    }
 
    .skill-p {
@@ -470,8 +481,12 @@ main {
 
    .contact-h3 {
       font-size: $size-title;
-      color: $color2;
+      color: $color3;
       margin: 100px auto 30px auto;
+
+      .icon-h3 {
+         color: $color2;
+      }
    }
 
    .contact-p {

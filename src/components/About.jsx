@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaMapMarked } from 'react-icons/fa';
+import { FaMapMarked, FaUser } from 'react-icons/fa';
 
 const About = ({ isVisble }) => {
 
@@ -31,7 +31,8 @@ const About = ({ isVisble }) => {
       ref={element}
       className='about-container'
    >
-      <h3> ABOUT ME </h3>
+
+      <h3 id='about-title'> <FaUser className='icon-h3' /> ABOUT ME </h3>
 
       <img 
         src='images/profilepic.jpg'

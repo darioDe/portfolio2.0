@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBootstrap, FaCss3Alt, FaGit, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, FaSass } from 'react-icons/fa';
+import { FaBootstrap, FaCss3Alt, FaGit, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, FaSass, FaTools } from 'react-icons/fa';
 import Skill from './Skill';
 
 
@@ -7,7 +7,7 @@ import Skill from './Skill';
 const Skills = () => {
   return (
     <section className='skill-container'>
-      <h3 className='skill-h3'> TOOLS & SKILLS </h3>
+      <h3 className='skill-h3' id='skills-title'> <FaTools className='icon-h3' /> TOOLS & SKILLS </h3>
 
       <p className='skill-p'> These are some of the skills and tools that I have learned to use. I also have experience with <span>Tailwind and other libraries</span>. Over time, I will continue to add many more!</p>
 

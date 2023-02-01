@@ -26,22 +26,22 @@ const Modal = ({ modalMenu }) => {
           
           <li className={openModal ? 'li-1' : '' }>
             <FaUser className="light-icon"/>
-            <a href=""> ABOUT  </a> 
+            <a href="#about-title"> ABOUT  </a> 
           </li>
           
           <li className={openModal ? 'li-2' : '' }>
             <FaCode className="light-icon"/>
-            <a href="">  PROJECTS  </a>  
+            <a href="#project-title">  PROJECTS  </a>  
           </li>
            
           <li className={openModal ? 'li-3' : '' }>
             <FaTools className="light-icon"/>
-            <a href="">  SKILLS  </a> 
+            <a href="#skills-title">  SKILLS  </a> 
           </li>
 
           <li className={openModal ? 'li-4' : '' }> 
             <FaEnvelope className="light-icon"/>
-            <a href="">  CONTACT  </a>
+            <a href="#contact-title">  CONTACT  </a>
           </li>
         </ul>
       </div>

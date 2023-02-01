@@ -81,7 +81,7 @@ const Contact = () => {
       ref={element} 
       className='contact-container'
     >
-      <h3 className='contact-h3'> CONTACT ME </h3>
+      <h3 className='contact-h3' id='contact-title'> <FaEnvelope className='icon-h3' /> CONTACT ME </h3>
 
       <p className='contact-p'> If you want to contact me, you can do it on :</p>
       <ul 
@@ -92,6 +92,8 @@ const Contact = () => {
         <li className='contact-li'> <FaEnvelope className='contact-icon' /> <p href=''> rdduarte1811@gmail.com </p> </li>
         <li className='contact-li'> <FaLinkedin className='contact-icon' /> <a href='https://www.linkedin.com/in/rubenduarte1811/'> My Linkedin Profile </a> </li>
       </ul>
+
+      <p className='contact-p'> Or complete this formulary: </p>
 
       <form 
         action="https://formsubmit.co/rdduarte1811@gmail.com"
