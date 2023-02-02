@@ -22,7 +22,7 @@ function App() {
       <Nav />
       <Header />
       <Main isVisible={isVisible}/>
-      <Footer />
+      <Footer isVisible={isVisible}/>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaCode, FaEnvelope, FaTools, FaUser } from 'react-icons/fa'
+import Anchor from './Anchor';
 
 const Modal = ({ modalMenu }) => {
 
@@ -26,22 +27,22 @@ const Modal = ({ modalMenu }) => {
           
           <li className={openModal ? 'li-1' : '' }>
             <FaUser className="light-icon"/>
-            <a href="#about-title"> ABOUT  </a> 
+            <Anchor href='#about-title' > ABOUT </Anchor>
           </li>
           
           <li className={openModal ? 'li-2' : '' }>
             <FaCode className="light-icon"/>
-            <a href="#project-title">  PROJECTS  </a>  
+            <Anchor href="#project-title">  PROJECTS  </Anchor>  
           </li>
            
           <li className={openModal ? 'li-3' : '' }>
             <FaTools className="light-icon"/>
-            <a href="#skills-title">  SKILLS  </a> 
+            <Anchor href="#skills-title">  SKILLS  </Anchor> 
           </li>
 
           <li className={openModal ? 'li-4' : '' }> 
             <FaEnvelope className="light-icon"/>
-            <a href="#contact-title">  CONTACT  </a>
+            <Anchor href="#contact-title">  CONTACT  </Anchor>
           </li>
         </ul>
       </div>

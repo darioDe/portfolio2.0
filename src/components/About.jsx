@@ -39,7 +39,6 @@ const About = ({ isVisble }) => {
         className='about-profile' 
       />
 
-
       <p
         className={`about-p ${visible ? 'p-visible' : ''}`}
         style={{ transition: 'opacity 1s' }}

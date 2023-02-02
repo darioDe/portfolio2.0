@@ -45,6 +45,9 @@ const Skill = ({ children, name }) => {
 
      if ( window.scrollY >= elementTop + (elementHeight * 1/4) - viewportHeight ) {
       setIsVisibleBar(true)
+      setInterval(() => {
+        setOverChild(true)
+      }, 500);
      }
    });
  }, []);
@@ -53,7 +56,6 @@ const Skill = ({ children, name }) => {
     <div className='skill'>
       <div 
          className={`container-children ${isVisibleChild ? 'visible-child' : ''}`}
-         onMouseOver={()=> setOverChild(true)}
          ref={child}
 
       >

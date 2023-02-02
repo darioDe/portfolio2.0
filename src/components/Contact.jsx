@@ -88,9 +88,9 @@ const Contact = () => {
         className={`${visible ? 'visible' : ""}`}
         style={{ transition: 'opacity 1s' }}
       >
-        <li className='contact-li'> <FaGithub className='contact-icon' /> <a href='https://github.com/darioDe'> My Github Profile </a> </li>
+        <li className='contact-li'> <FaGithub className='contact-icon' /> <a href='https://github.com/darioDe'> Go to my Github! </a> </li>
+        <li className='contact-li'> <FaLinkedin className='contact-icon' /> <a href='https://www.linkedin.com/in/rubenduarte1811/'> Go to my Linkedin! </a> </li>
         <li className='contact-li'> <FaEnvelope className='contact-icon' /> <p href=''> rdduarte1811@gmail.com </p> </li>
-        <li className='contact-li'> <FaLinkedin className='contact-icon' /> <a href='https://www.linkedin.com/in/rubenduarte1811/'> My Linkedin Profile </a> </li>
       </ul>
 
       <p className='contact-p'> Or complete this formulary: </p>
