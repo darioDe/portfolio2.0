@@ -7,12 +7,13 @@ import Skills from './Skills';
 
 const Main = ( {isVisible}) => {
 
+  // STATE TO HANDLE VISIBILITY OF COMPONENTS
   const [visbleComponets, setVisbleComponets] = useState(false);
-
+  // USE EFFECT TO SET THE COMPONENTS TO BE VISIBLE AFTER 5 SECONDS
   useEffect(() => {
     setTimeout(() => {
       setVisbleComponets(true);
-    }, 5000); // 5000 milisegundos = 5 segundos
+    }, 5000);
   }, [isVisible]);
 
   return (

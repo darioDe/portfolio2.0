@@ -13,15 +13,18 @@ const Projects = () => {
 
   // FUNCTION FOR SCROLL EVENT
   useEffect(() => {
-    
+    // ADD A FUNCTION FOR THE SCROLL EVENT
     window.addEventListener('scroll', () => {
 
       const element = proj.current;
       const elementTop = element.offsetTop;
       const elementHeight = element.offsetHeight;
       const viewportHeight = window.innerHeight;
-
+      
+      // CHECK IF THE SCROLL POSITION IS GREATER THAN OR EQUAL TO THE ELEMENT'S TOP
+      // PLUS A PORTION OF THE ELEMENT'S HEIGHT MINUS THE VIEWPORT HEIGHT
       if ( window.scrollY >= elementTop + (elementHeight * 1/8) - viewportHeight ) {
+        // SET THE VISIBILITY TO TRUE
         setIsVisible(true)
       }
     });

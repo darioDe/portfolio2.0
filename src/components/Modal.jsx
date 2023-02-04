@@ -3,9 +3,10 @@ import { FaCode, FaEnvelope, FaTools, FaUser } from 'react-icons/fa'
 import Anchor from './Anchor';
 
 const Modal = ({ modalMenu, setModalMenu }) => {
-
+   // STATE TO CONTROL THE OPENING AND CLOSING OF THE MODAL
    const [openModal, setOpenModal] = useState(false);
    
+   // HOOK TO UPDATE THE STATE OF THE MODAL
    useEffect(() => {
      if (modalMenu) {
          setTimeout(() => {

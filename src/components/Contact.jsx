@@ -5,6 +5,7 @@ import { useForm } from '../hooks/useForm'
 ;
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
+//INITIAL VALUES FOR THE FORM
 const initialForm = {
   name : '',
   email : '',
@@ -12,6 +13,7 @@ const initialForm = {
   comments : '',
 };
 
+//FORM VALIDATIONS FUNCTION
 const validationsForm = (form) => {
   let errors = {};
   let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;

@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = ({ isVisible }) => {
-
+  // STATE TO TRACK VISIBILITY OF FOOTER COMPONENT
   const [visbleComponets, setVisbleComponets] = useState(false);
 
+  // USE EFFECT HOOK TO SET TIMEOUT AND DISPLAY FOOTER COMPONENT
   useEffect(() => {
     setTimeout(() => {
       setVisbleComponets(true);
-    }, 5000); // 5000 milisegundos = 5 segundos
+    }, 5000);
   }, [isVisible]);
 
   return (
