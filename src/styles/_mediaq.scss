@@ -1,2 +1,24 @@
 // MEDIAQUERIES
 
+@media screen and (min-width: 992px) {
+   
+   .about-container {
+
+      .about-box {
+         display: flex;
+
+      }
+      
+      .about-p {
+         max-width: 250px;
+      }
+   }
+
+   .proj-container {
+
+      work-box {
+         display: flex;
+      }
+   }
+   
+}

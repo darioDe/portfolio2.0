@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaCode, FaEnvelope, FaTools, FaUser } from 'react-icons/fa'
 import Anchor from './Anchor';
 
-const Modal = ({ modalMenu }) => {
+const Modal = ({ modalMenu, setModalMenu }) => {
 
    const [openModal, setOpenModal] = useState(false);
    
@@ -27,22 +27,22 @@ const Modal = ({ modalMenu }) => {
           
           <li className={openModal ? 'li-1' : '' }>
             <FaUser className="light-icon"/>
-            <Anchor href='#about-title' > ABOUT </Anchor>
+            <Anchor href='#about-title' setModalMenu={setModalMenu}> ABOUT </Anchor>
           </li>
           
           <li className={openModal ? 'li-2' : '' }>
             <FaCode className="light-icon"/>
-            <Anchor href="#project-title">  PROJECTS  </Anchor>  
+            <Anchor href="#project-title" setModalMenu={setModalMenu}>  PROJECTS  </Anchor>  
           </li>
            
           <li className={openModal ? 'li-3' : '' }>
             <FaTools className="light-icon"/>
-            <Anchor href="#skills-title">  SKILLS  </Anchor> 
+            <Anchor href="#skills-title" setModalMenu={setModalMenu}>  SKILLS  </Anchor> 
           </li>
 
           <li className={openModal ? 'li-4' : '' }> 
             <FaEnvelope className="light-icon"/>
-            <Anchor href="#contact-title">  CONTACT  </Anchor>
+            <Anchor href="#contact-title" setModalMenu={setModalMenu}>  CONTACT  </Anchor>
           </li>
         </ul>
       </div>

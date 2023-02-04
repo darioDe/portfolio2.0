@@ -183,7 +183,6 @@ main {
       margin-bottom: 25px;
       font-size: $size-title;
       color: $color3;
-      border-bottom: 1px solid;
       max-width: 600px;
       margin: auto auto 30px;
 
@@ -250,10 +249,21 @@ main {
       color: $color3;
       max-width: 600px;
       margin: auto;
-      border-bottom: 1px solid;
 
       .icon-h3 {
          color: $color2;
+      }
+   }
+
+   .proj-p {
+      padding: 0 30px;
+      font-size: 1.2rem;
+      margin: 30px auto 50px;
+      max-width: 500px;
+
+      span {
+         color: $color0;
+         font-weight: bold;
       }
    }
 }
@@ -346,7 +356,6 @@ main {
       color: $color3;
       max-width: 600px;
       margin: auto auto 30px;
-      border-bottom: 1px solid;
 
       .icon-h3 {
          color: $color2;
@@ -495,7 +504,6 @@ main {
       color: $color3;
       margin: 100px auto 30px auto;
       max-width: 600px;
-      border-bottom: 1px solid;
 
       .icon-h3 {
          color: $color2;

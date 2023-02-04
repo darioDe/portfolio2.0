@@ -39,19 +39,22 @@ const About = ({ isVisble }) => {
         className='about-profile' 
       />
 
-      <p
-        className={`about-p ${visible ? 'p-visible' : ''}`}
-        style={{ transition: 'opacity 1s' }}
-      >
-        Hi, I'm a <span> front-end developer </span> with a passion for creating beautiful and user-friendly websites and applications. I'm always looking for opportunities to <span> learn new skills and technologies </span>. I like to read blogs and tutorials to stay up-to-date with the latest trends in front-end development.
-      </p>
+      <div className='about-box'>
+        <p
+          className={`about-p ${visible ? 'p-visible' : ''}`}
+          style={{ transition: 'opacity 1s' }}
+        >
+          Hi, I'm a <span> front-end developer </span> with a passion for creating beautiful and user-friendly websites and applications. I'm always looking for opportunities to <span> learn new skills and technologies </span>. I like to read blogs and tutorials to stay up-to-date with the latest trends in front-end development.
+        </p>
+        
+        <p
+          className={`about-p ${visible ? 'p-visible' : ''}`}
+          style={{ transition: 'opacity 2s' }}
+        >
+          My personal skills stand out for <span>responsibility</span>, ability to <span>work in a team</span> because I am a communicative and positive person. I know how to learn from my mistakes and listen to the advice of others. I also study and practice <span>English</span> and <span>Portuguese</span> constantly although my native language is <span>Spanish</span>.
+        </p>
+      </div>
 
-      <p
-        className={`about-p ${visible ? 'p-visible' : ''}`}
-        style={{ transition: 'opacity 2s' }}
-      >
-        My personal skills stand out for <span>responsibility</span>, ability to <span>work in a team</span> because I am a communicative and positive person. I know how to learn from my mistakes and listen to the advice of others. I also study and practice <span>English</span> and <span>Portuguese</span> constantly although my native language is <span>Spanish</span>.
-      </p>
       <div className='about-location'>
         <FaMapMarked className='about-map' />
         <p>Buenos Aires, Argentina</p>

@@ -10,7 +10,7 @@ const Nav = () => {
      <nav className='nav-bar'>
        {/* BUTTON FOR OPEN BURGER MENU */}
        <FaBars className={`nav-faBars ${modalMenu && 'faBars-rotate'}`} onClick={() => setModalMenu(!modalMenu)}/>
-       <Modal modalMenu={modalMenu}/>
+       <Modal modalMenu={modalMenu} setModalMenu={setModalMenu} />
      </nav>
    );
  };

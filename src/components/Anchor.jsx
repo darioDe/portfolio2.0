@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
-
-const Anchor = ({ href, children }) => {
+const Anchor = ({ href, children, setModalMenu }) => {
   const handleClick = e => {
     e.preventDefault();
     const target = document.querySelector(href);
     target.scrollIntoView({ behavior: "smooth" });
+    
+    setTimeout(() => {
+      setModalMenu(false);
+    }, 200);
   };
 
   return (

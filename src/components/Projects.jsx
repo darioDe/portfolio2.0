@@ -21,7 +21,7 @@ const Projects = () => {
       const elementHeight = element.offsetHeight;
       const viewportHeight = window.innerHeight;
 
-      if ( window.scrollY >= elementTop + (elementHeight * 1/4) - viewportHeight ) {
+      if ( window.scrollY >= elementTop + (elementHeight * 1/8) - viewportHeight ) {
         setIsVisible(true)
       }
     });
@@ -34,14 +34,18 @@ const Projects = () => {
     >
 
       <h3 className='proj-h3' id='project-title'> <FaCode className='icon-h3' /> PROJECTS </h3>
-      {works.map( work => 
-         <Project 
-            work={work}
-            id={work.id}
-            key={idGenerator()}
-         />   
-      )}
 
+      <p className='proj-p'> I did these projects to <span>learn and practice</span> different technologies and <span>improve my stack</span>. I belive that the best way to learn something is to <span>apply it in practice</span>. </p>
+
+      <div className='work-box'> 
+        {works.map( work => 
+          <Project 
+              work={work}
+              id={work.id}
+              key={idGenerator()}
+          />   
+        )}
+      </div>
     </section>
   )
 }
