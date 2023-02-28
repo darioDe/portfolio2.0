@@ -6,18 +6,19 @@
 
       .about-box {
          display: flex;
-
+         margin-bottom: 4rem;
       }
       
       .about-p {
-         max-width: 250px;
+         max-width: 240px;
       }
    }
 
    .proj-container {
 
-      work-box {
+      .work-box {
          display: flex;
+         flex-direction: column;
       }
    }
    
