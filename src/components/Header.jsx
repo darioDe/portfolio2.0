@@ -1,8 +1,18 @@
+import { useState, useEffect } from 'React';
+
 const Header = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(true);
+    }, 3800);
+  }, []);
+
   return (
    <header>
-         <h1 className='header-h1'> FRONT-END DEV </h1>
-         <h2 className='header-h2'> RUBEN DUARTE </h2>
+         <h1 className={`header-h1 ${visible ? 'fade-right' : '' }`}> FRONT-END DEV </h1>
+         <h2 className={`header-h2 ${visible ? 'fade-left' : '' }`}> RUBEN DUARTE </h2>
    </header>
   )
 }
